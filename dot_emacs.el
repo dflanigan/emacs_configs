@@ -1,3 +1,5 @@
+;; 
+;;
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
@@ -7,7 +9,27 @@
 	     '("marmalade" . "http://marmalade-repo.org/packages/") t)
 )
 
+(package-refresh-contents)
+
+(defun install-if-needed (package)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;; make more packages available with the package installer
+(setq to-install
+      '(python-mode magit yasnippet jedi auto-complete autopair find-file-in-repository))
+
+(mapc 'install-if-needed to-install)
+
+;; git interface
+(require 'magit)
+(global-set-key "\C-xg" 'magit-status)
+
+
 ;; Load python-mode for scons files
+;; ;; Python mode settings
+(require 'python-mode)
+(add-to-list 'auto-mode-alist '("\\.py$" . python-mode))
 (setq auto-mode-alist(cons '("SConstruct" . python-mode) auto-mode-alist))
 (setq auto-mode-alist(cons '("SConscript" . python-mode) auto-mode-alist))
 
