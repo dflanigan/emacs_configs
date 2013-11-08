@@ -17,9 +17,12 @@
 
 ;; make more packages available with the package installer
 (setq to-install
-      '(python-mode magit yasnippet jedi auto-complete autopair find-file-in-repository flycheck))
+      '(python-mode magit yasnippet jedi auto-complete autopair find-file-in-repository flycheck helm))
 
 (mapc 'install-if-needed to-install)
+
+;; helm
+(require 'helm-config)
 
 ;; git interface
 (require 'magit)
@@ -90,6 +93,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(indent-tabs-mode nil)
  '(make-backup-files nil)
  '(tool-bar-mode nil))
 (custom-set-faces
