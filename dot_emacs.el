@@ -105,5 +105,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Courier" :foundry "Adobe" :slant normal :weight normal :height 102 :width normal))))
- '(comint-highlight-prompt ((t (:inherit minibuffer-prompt :foreground "DeepSkyBlue1")))))
+ '(comint-highlight-prompt ((t (:inherit minibuffer-prompt :foreground "DeepSkyBlue1"))))
+ '(minibuffer-prompt ((t (:foreground "DodgerBlue1")))))
 
