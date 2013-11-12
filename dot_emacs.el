@@ -21,6 +21,9 @@
 
 (mapc 'install-if-needed to-install)
 
+;;linum
+(setq linum-format "%3d ")
+
 ;; helm
 (require 'helm-config)
 
