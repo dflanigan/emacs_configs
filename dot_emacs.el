@@ -26,6 +26,7 @@
 
 ;; helm
 (require 'helm-config)
+(helm-mode 1)
 
 ;; git interface
 (require 'magit)
@@ -89,7 +90,7 @@
 (add-to-list 'auto-mode-alist '("\\.tlc\\'" . protobuf-mode))
 
 ;; Interactively Do Things
-(ido-mode t)
+;; (ido-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
