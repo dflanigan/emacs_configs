@@ -17,7 +17,7 @@
 
 ;; make more packages available with the package installer
 (setq to-install
-      '(python-mode magit yasnippet jedi auto-complete autopair find-file-in-repository flycheck helm))
+      '(python-mode magit yasnippet jedi auto-complete autopair find-file-in-repository flycheck))
 
 (mapc 'install-if-needed to-install)
 
@@ -25,8 +25,11 @@
 ;;(setq linum-format "%3d ")
 
 ;; helm
-(require 'helm-config)
-(helm-mode 1)
+;;(require 'helm-config)
+;;(helm-mode 1)
+
+;; Interactively Do Things
+;; (ido-mode t)
 
 ;; git interface
 (require 'magit)
@@ -89,8 +92,6 @@
 (load-file "~/emacs_config/manual_install/protobuf-mode.el")
 (add-to-list 'auto-mode-alist '("\\.tlc\\'" . protobuf-mode))
 
-;; Interactively Do Things
-;; (ido-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
